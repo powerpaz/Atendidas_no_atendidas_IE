@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Visualizador de Instituciones No atendidas</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" crossorigin="anonymous"/>
+
+  <!-- Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- Librerías -->
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="anonymous"></script>
+  <script defer src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js" crossorigin="anonymous"></script>
+  <script defer src="https://unpkg.com/topojson-client/dist/topojson-client.min.js" crossorigin="anonymous"></script>
+
+  <!-- App -->
+  <script defer src="config.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+
+  <!-- Encabezado institucional -->
+  <header class="brand-bar">
+    <div class="brand-left">
+      <img src="logo.png" alt="Ministerio de Educación, Deporte y Cultura">
+    </div>
+    <h1 class="brand-title">
+      Geovisor de Instituciones No Atendidas – MINEDEC
+    </h1>
+    <div class="brand-right"></div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="panel">
+        <div class="panel-header">
+          <h2 class="panel-title">
+            <span class="panel-icon">☰</span>
+            Capas (GeoJSON/TopoJSON)
+          </h2>
+          <span class="status" id="status">Inicializando…</span>
+        </div>
+
+        <div class="panel-content">
+          <div class="filters">
+            <div class="filter-group">
+              <label class="group-title">Polígonos base</label>
+              <div class="toggle-row">
+                <input type="checkbox" id="tgProv" checked>
+                <label for="tgProv">Provincias</label>
+              </div>
+              <div class="toggle-row">
+                <input type="checkbox" id="tgNbi" checked>
+                <label for="tgNbi">Cantones con NBI &gt; 50%</label>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <label class="group-title">Puntos</label>
+              <div class="toggle-row">
+                <input type="checkbox" id="tgViol">
+                <label for="tgViol">Total Casos de Violencia (burbujas)</label>
+              </div>
+              <div class="toggle-row">
+                <input type="checkbox" id="tgOtras">
+                <label for="tgOtras">Total Estudiantes Otras Nacionalidades (burbujas)</label>
+              </div>
+              <div class="toggle-row">
+                <input type="checkbox" id="tgIENo">
+                <label for="tgIENo">IE Fiscales No atendidas</label>
+              </div>
+              <div class="toggle-row">
+                <input type="checkbox" id="tgServ">
+                <label for="tgServ">Servicios básicos (agua y luz)</label>
+              </div>
+            </div>
+
+            <div class="data-source">
+              <span class="source-label">Fuente:</span> Capas por URL (Release) o locales
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="map-header">
+        <div class="header-content">
+          <h1 class="map-title">Mapa de priorización</h1>
+          <p class="map-subtitle">Capas base + puntos temáticos desde Releases</p>
+        </div>
+      </header>
+      <div id="map" class="map-container"></div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <span>© DAEI – MINEDEC | Visor web</span>
+  </footer>
+
+</body>
+</html>

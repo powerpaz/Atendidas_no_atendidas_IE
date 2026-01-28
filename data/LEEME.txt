@@ -1,0 +1,6 @@
+Este visor carga:
+- Provincias (local): provincias_simplificado.geojson
+- NBI (>50%) (local): data/cantones_nbi_mayor_50.topo.json
+- Capas de puntos (URL): configuradas en config.js (window.LAYER_SOURCES)
+
+Si cambias el tag del Release (v1.0 -> v1.1), actualiza config.js.
