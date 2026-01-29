@@ -881,7 +881,7 @@ function initServiciosToggles() {
     () => loadPointLayer('ieNoAtendidas', 'ieNoAtendidas', {
       fixedRadius: 5,
       fillColor: '#c4c8c7',
-      strokeColor: '#ffffff',
+      strokeColor: '#FF746C',
       weight: 0.8,
       fillOpacity: 0.85
     }),
