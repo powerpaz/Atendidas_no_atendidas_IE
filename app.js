@@ -881,7 +881,7 @@ function initServiciosToggles() {
     'tgIENo',
     () => loadPointLayer('ieNoAtendidas', 'ieNoAtendidas', {
       fixedRadius: 2.8,
-      fillColor: '#ff0000',
+      fillColor: '#555D50',
       strokeColor: '#ffffff',
       weight: 0.8,
       fillOpacity: 0.75
