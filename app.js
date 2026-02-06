@@ -644,7 +644,7 @@ function normEstado(p) {
 
 const PRIOR_COLORS = {
   BUENO: '#32CD32',
-  DETERIORO: '#ffa420',
+  DETERIORO: '#111111',
   MALO: '#FF0000'
 };
 
