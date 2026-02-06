@@ -229,7 +229,7 @@ html,body{height:100%;margin:0;font-family:'Inter',system-ui,-apple-system,Segoe
 
 /* ---- Zona de Atención Prioritaria: colores por estado (subtoggles) ---- */
 #priorSubtoggles label[for="tgPriorBueno"]{ color: #32CD32; font-weight: 600; }
-#priorSubtoggles label[for="tgPriorDeterioro"]{ color: #ffa420; font-weight: 600; }
+#priorSubtoggles label[for="tgPriorDeterioro"]{ color: #111111; font-weight: 600; }
 #priorSubtoggles label[for="tgPriorMalo"]{ color: #FF0000; font-weight: 600; }
 .services-title{
   font-weight: 600;
